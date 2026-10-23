@@ -2,7 +2,6 @@
 
 # ChatGo — Local Multi-User Chat
 
-![tests](https://github.com/<your-username>/chatgo/actions/workflows/tests.yml/badge.svg)
 
 A desktop chat application built with **Python**, **PyQt6** and **TCP sockets**, designed
 as a phone-sized app (390 × 844). Several users can sign up, log in at the same time, chat in a
@@ -49,28 +48,7 @@ flowchart LR
 the server saves it, adds an id and timestamp → it is delivered to everyone (public) or to
 sender + recipient only (DM) → each `ChatWindow` stores it and draws a bubble.
 
-### Project structure
 
-```
-chatgo/
-├── common/protocol.py       # packet format, constants, timestamp helper (shared)
-├── server/
-│   ├── server.py            # sockets, threads, routing, broadcast
-│   └── database.py          # SQLite: accounts, password hashing, history
-├── client/
-│   ├── app.py               # entry: login -> chat window
-│   ├── login_window.py      # Log In / Sign Up screen
-│   ├── chat_window.py       # chat list page + conversation page, edit logic
-│   ├── widgets.py           # LogoWidget, AvatarWidget, ConversationTile, MessageBubble, EmojiPicker
-│   ├── network.py           # NetworkClient (socket + reader thread -> Qt signals)
-│   ├── phone.py             # standard phone window size and placement
-│   ├── images.py            # profile picture <-> base64 helpers
-│   ├── emoji_data.py        # emoji categories
-│   └── theme.py             # colours + stylesheet
-├── tests/test_server.py     # integration tests (real sockets)
-├── run_server.py            # start the server
-├── run_client.py            # start one client
-└── run_local.py             # server + several clients on one computer
 ```
 
 OOP concepts used: classes with single responsibilities (`ChatServer`, `Session`, `Database`,
