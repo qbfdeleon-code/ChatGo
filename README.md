@@ -7,7 +7,7 @@ Final project for **OOP 2** (BS Computer Engineering) by **Group 2**.
 
 | Log in | Sign up | Chat list | Group chat |
 |:--:|:--:|:--:|:--:|
-| ![login](docs/login.png) | ![signup](docs/signup.png) | ![list](docs/chat-list.png) | ![group](docs/group-chat.png) |
+| ![login](docs/login.png) | ![signup](docs/signup.png) | ![list](docs/chat-list.png) 
 
 ## Features
 
