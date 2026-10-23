@@ -5,9 +5,9 @@
 A local multi-user chat app made with **Python**, **PyQt6** and **sockets**.
 Final project for **OOP 2** (BS Computer Engineering) by **Group 2**.
 
-| Log in | Sign up | Chat list |
+| Log in | Sign up | Chat list | Group chat |
 |:--:|:--:|:--:|:--:|
-| ![login](docs/login.png) | ![signup](docs/signup.png) | ![list](docs/chat-list.png) 
+| ![login](docs/login.png) | ![signup](docs/signup.png) | ![list](docs/chat-list.png) | ![group](docs/group-chat.png) |
 
 ## Features
 
