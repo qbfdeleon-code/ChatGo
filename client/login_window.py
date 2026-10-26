@@ -1,6 +1,9 @@
 """Phone-sized Log In / Sign Up screen (username + password, avatar, optional picture)."""
 from __future__ import annotations
 
+#updated for login popup
+from client.signup_flow import show_signup_success
+
 import re
 
 from PyQt6.QtCore import QSettings, Qt
@@ -267,13 +270,34 @@ class LoginWindow(QDialog):
             self.error.setText(f"Could not connect to {host}:{port}.\n"
                                "Make sure the server is running (run_server.py).")
             self.server_box.show()
+
+            #added code for the popup
         else:
             self.settings.setValue("host", host)
             self.settings.setValue("port", port)
-            self.settings.setValue(self._key + "username", session["username"])
-            self.settings.setValue(self._key + "avatar", session["avatar"])
+
+            if register:
+                show_signup_success(self)
+
+                # Return to the login tab after registration.
+                self.login_tab.setChecked(True)
+                self._apply_mode()
+                self.password.clear()
+                self.confirm.clear()
+                self.username.setText(username)
+                self.submit.setEnabled(True)
+                self.submit.setText("Log In")
+                self.password.setFocus()
+                return
+
+            # Normal login: save the session and open the chat.
+            self.settings.setValue(
+                self._key + "username", session["username"])
+            self.settings.setValue(
+                self._key + "avatar", session["avatar"])
             self.client, self.session = client, session
             self.accept()
             return
+            
         self.submit.setEnabled(True)
         self.submit.setText("Create Account" if register else "Log In")   # keep the error visible
