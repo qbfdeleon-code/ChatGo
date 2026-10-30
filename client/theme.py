@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 """Green & black palette with a rose complementary accent, plus the stylesheet."""
 
 BG = "#070B09"
@@ -9,8 +12,13 @@ ACCENT_HOVER = "#16A34A"
 ACCENT_DARK = "#0A3D1D"       # avatar discs placed on top of the accent colour
 ON_ACCENT = "#04120A"         # near-black text on green
 COMPLEMENT = "#FF4D8D"        # rose-magenta, the complement of green: badges, edit, alerts
+<<<<<<< HEAD
 TEXT = "#FFFFFF"
 MUTED = "#B0B0B0"
+=======
+TEXT = "#ECFDF5"
+MUTED = "#8FB3A0"
+>>>>>>> origin/main
 BORDER = "#1F3A2B"
 BUBBLE_OTHER = "#18281F"
 ONLINE = "#4ADE80"
@@ -104,6 +112,7 @@ QScrollBar::handle:vertical { background: @BORDER@; border-radius: 4px; min-heig
 QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
 QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: transparent; }
 
+<<<<<<< HEAD
 QFrame#BubbleOwn { background-color: #2563EB; border-radius: 16px; }
 QFrame#BubbleOther { background-color: @BUBBLE_OTHER@; border: 1px solid @BORDER@; border-radius: 16px; }
 QFrame#BubbleOwn QLabel, QFrame#BubbleOther QLabel { background: transparent; }
@@ -111,6 +120,15 @@ QFrame#BubbleOwn QLabel { color: #FFFFFF; }
 QFrame#BubbleOther QLabel { color: @TEXT@; }
 QLabel#BubbleBody { font-size: 14px; }
 QFrame#BubbleOwn QLabel#BubbleHeader, QFrame#BubbleOwn QLabel#BubbleEdited { color: rgba(255,255,255,0.75); }
+=======
+QFrame#BubbleOwn { background-color: @ACCENT@; border-radius: 16px; }
+QFrame#BubbleOther { background-color: @BUBBLE_OTHER@; border: 1px solid @BORDER@; border-radius: 16px; }
+QFrame#BubbleOwn QLabel, QFrame#BubbleOther QLabel { background: transparent; }
+QFrame#BubbleOwn QLabel { color: @ON_ACCENT@; }
+QFrame#BubbleOther QLabel { color: @TEXT@; }
+QLabel#BubbleBody { font-size: 14px; }
+QFrame#BubbleOwn QLabel#BubbleHeader, QFrame#BubbleOwn QLabel#BubbleEdited { color: rgba(4,18,10,0.7); }
+>>>>>>> origin/main
 QFrame#BubbleOther QLabel#BubbleHeader, QFrame#BubbleOther QLabel#BubbleEdited { color: @MUTED@; }
 QLabel#BubbleHeader { font-size: 11px; }
 QLabel#BubbleEdited { font-size: 10px; }

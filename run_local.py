@@ -17,11 +17,18 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="ChatGo local multi-user mode")
+<<<<<<< HEAD
     parser.add_argument("--clients", type=int, default=2,
                     help="number of client windows to open")
     parser.add_argument("--db", default=os.path.join(HERE, "chatgo.db"))
     args = parser.parse_args()
     count = max(1, args.clients)
+=======
+    parser.add_argument("--clients", type=int, default=2, help="number of phone windows (1-4)")
+    parser.add_argument("--db", default=os.path.join(HERE, "chatgo.db"))
+    args = parser.parse_args()
+    count = max(1, min(args.clients, 4))
+>>>>>>> origin/main
 
     logging.basicConfig(level=logging.INFO,
                         format="%(asctime)s  %(levelname)-7s %(message)s", datefmt="%H:%M:%S")
