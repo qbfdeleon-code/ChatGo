@@ -1,0 +1,11 @@
+chatgo.db
+users.json
+history.json
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+history.json
+users.json
